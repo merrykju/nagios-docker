@@ -85,9 +85,9 @@ def main():
 
     args = argp.parse_args()
 
-    # create our check object, if service metric !=0, consider that critical.
+    # create our check object, if service metric !=1 (True), consider that critical.
     check = nagiosplugin.Check(Docker(args.url, args.api_version),
-                               nagiosplugin.ScalarContext('service', '0', '0', fmt_metric=''),
+                               nagiosplugin.ScalarContext('service', '1:1', '1:1', fmt_metric=''),
                                DockerSummary())
 
     check.main(args.verbose, args.timeout)
