@@ -44,7 +44,7 @@ class Docker(nagiosplugin.Resource):
 
             metrics = [
                 nagiosplugin.Metric(
-                    'service', self.docker_running),
+                    'service', int(self.docker_running)),
                 nagiosplugin.Metric('images', self.images, context='default'),
                 nagiosplugin.Metric(
                     'go_routines', self.go_routines, context='default'),
@@ -55,7 +55,7 @@ class Docker(nagiosplugin.Resource):
             ]
 
         else:
-            metrics = [nagiosplugin.Metric('service', self.docker_running)]
+            metrics = [nagiosplugin.Metric('service', int(self.docker_running))]
 
         return metrics
 

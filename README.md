@@ -65,11 +65,11 @@ If you are using the socket URL to access the API, on each monitored host, you'l
 
 Service is running:
 
-    DOCKER OK | events_listeners=0 file_descriptors=20 go_routines=33 images=0 service=True;1:1;1:1
+    DOCKER OK | events_listeners=0 file_descriptors=20 go_routines=33 images=0 service=1;1:1;1:1
 
 Service is not running:
 
-    DOCKER CRITICAL - outside range 1:1 | service=False;1:1;1:1
+    DOCKER CRITICAL - outside range 1:1 | service=0;1:1;1:1
 
 The following stats are returned:
 
