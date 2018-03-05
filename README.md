@@ -71,6 +71,8 @@ Service is not running:
 
     DOCKER CRITICAL - outside range 1:1 | service=0;1:1;1:1
 
+Mind you that the latter is also returned when the user running this plugin lacks sufficient privileges to run `docker info`.
+
 The following stats are returned:
 
 
